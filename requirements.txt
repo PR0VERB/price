@@ -3,7 +3,7 @@ dash
 pandas
 numpy
 dash_table
-logging
+# logging
 plotly
 plotly
 dash_core_components
