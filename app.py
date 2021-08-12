@@ -32,21 +32,21 @@ app.layout = html.Div(
         # Error Message
         html.Div(id="error-message"),
         # Top Banner
-        html.Div(
-            className="study-browser-banner row",
-            children=[
-                html.H2(className="h2-title",
-                        children="PRODUCT PRICE OPTIMIZATION"),
+        # html.Div(
+        #     className="study-browser-banner row",
+        #     children=[
+        #         html.H2(className="h2-title",
+        #                 children="PRODUCT PRICE OPTIMIZATION"),
 
-                html.Div(
-                    className="div-logo",
-                    children=html.Img(
-                        className="logo", src=app.get_asset_url("dash-logo-new.png")
-                    ),
-                ),
+        #         html.Div(
+        #             className="div-logo",
+        #             children=html.Img(
+        #                 className="logo", src=app.get_asset_url("dash-logo-new.png")
+        #             ),
+        #         ),
 
-            ],
-        ),
+        #     ],
+        # ),
 
         html.Div(
             [
@@ -132,7 +132,7 @@ app.layout = html.Div(
                             id = 'id-insights', style={'color': 'DarkCyan', 'fontSize': 15} 
                         ),
                         html.Br(),                    
-                        html.Div(dbc.Button("GET CODE", color="primary", className="mr-1", href="https://github.com/amitvkulkarni/Data-Apps/tree/main/Price%20Optimization",target='_blank')),
+                        # html.Div(dbc.Button("GET CODE", color="primary", className="mr-1", href="https://github.com/amitvkulkarni/Data-Apps/tree/main/Price%20Optimization",target='_blank')),
 
 
 
