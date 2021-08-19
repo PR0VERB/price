@@ -55,7 +55,7 @@ app.layout = html.Div(
                         html.Div(
                             className="padding-top-bot",
                             children=[
-                                html.H6("OPTIMISE"),
+                                html.H6("OPTIMISE FOR:"),
                                 dcc.RadioItems(
                                     id="selected-var-opt",
                                     options=[
