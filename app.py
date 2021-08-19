@@ -55,7 +55,7 @@ app.layout = html.Div(
                         html.Div(
                             className="padding-top-bot",
                             children=[
-                                html.H6("OPTIMIZE"),
+                                html.H6("OPTIMISE"),
                                 dcc.RadioItems(
                                     id="selected-var-opt",
                                     options=[
@@ -82,7 +82,7 @@ app.layout = html.Div(
                             className="padding-top-bot",
                             children=[
 
-                                html.H6("OPTIMIZATION RANGE"),
+                                html.H6("OPTIMISATION RANGE"),
                                 html.Div(
                                     id='output-container-range-slider'),
                                 dcc.RangeSlider(
@@ -316,7 +316,7 @@ def update_output_All(var_opt, var_range, var_cost):
 
             if opt_Revenue  > 0:
                 return [res.to_dict('records'), fig_QuantityVsRevenue, fig_PriceVsQuantity, 
-                    f'The maximum revenue of {opt_Revenue} is achieved by optimizing {var_opt} of {opt_Quantity}, fixed cost of {var_cost} and optimization was carried for {var_opt} range between {var_range}']
+                    f'The maximum revenue of {opt_Revenue} is achieved by optimizing {var_opt} of {opt_Quantity}, fixed cost of {var_cost} and optimisation was carried for {var_opt} range between {var_range}']
             else:
                 return [res.to_dict('records'), fig_QuantityVsRevenue, fig_PriceVsQuantity, 
                     f'For the fixed cost of {var_cost} and {var_opt} range between {var_range}, you will incur loss in revenue']
