@@ -32,21 +32,21 @@ app.layout = html.Div(
         # Error Message
         html.Div(id="error-message"),
         # Top Banner
-        html.Div(
-            className="study-browser-banner row",
-            children=[
-                html.H2(className="h2-title",
-                        children="PRODUCT PRICE OPTIMIZATION"),
+        # html.Div(
+        #     className="study-browser-banner row",
+        #     children=[
+        #         html.H2(className="h2-title",
+        #                 children="PRODUCT PRICE OPTIMIZATION"),
 
-                html.Div(
-                    className="div-logo",
-                    children=html.Img(
-                        className="logo", src=app.get_asset_url("dash-logo-new.png")
-                    ),
-                ),
+        #         html.Div(
+        #             className="div-logo",
+        #             children=html.Img(
+        #                 className="logo", src=app.get_asset_url("dash-logo-new.png")
+        #             ),
+        #         ),
 
-            ],
-        ),
+        #     ],
+        # ),
 
         html.Div(
             [
@@ -132,7 +132,7 @@ app.layout = html.Div(
                             id = 'id-insights', style={'color': 'DarkCyan', 'fontSize': 15} 
                         ),
                         html.Br(),                    
-                        html.Div(dbc.Button("GET CODE", color="primary", className="mr-1", href="https://github.com/amitvkulkarni/Data-Apps/tree/main/Price%20Optimization",target='_blank')),
+                        # html.Div(dbc.Button("GET CODE", color="primary", className="mr-1", href="https://github.com/amitvkulkarni/Data-Apps/tree/main/Price%20Optimization",target='_blank')),
 
 
 
@@ -302,10 +302,10 @@ def update_output_All(var_opt, var_range, var_cost):
 
             if opt_Revenue > 0:
                 return [res.to_dict('records'), fig_PriceVsRevenue, fig_PriceVsQuantity, 
-                    f'The maximum revenue of {opt_Revenue} is achieved by optimizing {var_opt} of {opt_Price}, fixed cost of {var_cost} and optimization was carried for {var_opt} range between {var_range}']
+                    f'The maximum revenue of {opt_Revenue} is achieved by optimizing the {var_opt} of {opt_Price}, a fixed cost of {var_cost} for the {var_opt} range of {var_range}.']
             else:
                 return [res.to_dict('records'), fig_PriceVsRevenue, fig_PriceVsQuantity, 
-                    f'For the fixed cost of {var_cost} and {var_opt} range between {var_range}, you will incur loss in revenue']
+                    f'With a fixed cost of {var_cost} and a {var_opt} range of {var_range}, you will incur losses.']
 
         else:
             res, fig_QuantityVsRevenue, fig_PriceVsQuantity, opt_Quantity,opt_Revenue  = Python.optimize_quantity.fun_optimize(
