@@ -327,6 +327,8 @@ def update_output_All(var_opt, var_range, var_cost):
 
 
 if __name__ == "__main__":
-    app.run_server(host="0.0.0.0",port="8050", debug=False,dev_tools_ui=False,dev_tools_props_check=False)
+#     app.run_server(host="0.0.0.0",port="8050", debug=False,dev_tools_ui=False,dev_tools_props_check=False)
+    app.run_server()
+
 
 #     app.run_server(debug=True, use_reloader=False, dev_tools_ui=False)
